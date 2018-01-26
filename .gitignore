@@ -1,0 +1,6 @@
+# node modules
+/node_modules
+
+# lock files
+*.lock
+*lock.json

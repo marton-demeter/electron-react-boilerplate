@@ -6,10 +6,10 @@
   "author": "Marton Demeter <marton1029@gmail.com>",
   "license": "GPL-3.0",
   "scripts": {
-    "react-start": "yarn webpack-dev-server",
+    "react-start": "yarn webpack-dev-server --config webpack/webpack.development.js",
     "electron-start": "yarn electron .",
     "start": "yarn concurrent -k \"yarn react-start\" \"yarn wait-on http://localhost:8080 && yarn electron-start",
-    "dist": "rm -rf dist && yarn webpack"
+    "dist": "yarn webpack --config webpack/webpack.production.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
